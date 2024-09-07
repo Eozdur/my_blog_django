@@ -1,0 +1,86 @@
+.sidebar
+{
+    flex: 3;
+    padding: 0px;
+    /* soldan ayır*/
+    margin-left: 10px;
+}
+
+.sidebar .area
+{
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.sidebar h3
+{
+    font-family: "Josefin Sans", sans-serif;
+    margin-bottom: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.sidebar h3::after
+{
+    content: "";
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background-color: black;
+    bottom: 2px;
+}
+
+.sidebar img
+{
+    padding: 5px;
+    border-radius: 15px;
+}
+
+.sidebar .categories
+{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.sidebar .categories span
+{
+    display: block;
+    width: calc(50% - 10px);
+    background-color: rgb(210, 214, 214);
+    font-family: "Josefin Sans", sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.sidebar a {
+    display: block; /* Bağlantıyı blok eleman yapar */
+    padding: 5px; /* İç boşluk ekler */
+    margin-bottom: 5px; /* Alt boşluk ekler */
+    border-radius: 5px; /* Köşeleri yuvarlatır */
+    text-decoration: none; /* Alt çizgiyi kaldırır */
+    color: rgb(17, 27, 29); /* Bağlantı rengi */
+    transition: background-color 0.3s; /* Arka plan rengi geçişi */
+}
+
+.sidebar a:hover {
+    background-color: #afacac; /* Üzerine gelindiğinde arka plan rengini değiştirir */
+}
+
+/* Scroll animation*/
+
+.sidebar .area
+{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.sidebar .area.active
+{
+    opacity: 1;
+}

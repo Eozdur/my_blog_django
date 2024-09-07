@@ -1,0 +1,32 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;  
+}
+
+body{
+  font-family: Arial, sans-serif;
+  background-color: #e9e3e3;
+  color: #333;
+  line-height: 1.6;
+}
+img, video{
+  width: 100%;/*bulunduğu containerın %100'ü kadar genişlikte olacak*/
+}
+
+a,a:active,a::before,a::after,a::link
+{
+    /*burada ne yapıldı ?
+    a etiketinin içindeki tüm elementlerin özelliklerini belirledik.
+    a::active ne işe yarar -> tıkladığımızda ne olacağını belirler.
+    a::before ne işe yarar -> a etiketinin içine bir şey eklemek istediğimizde kullanırız.
+    a::after ne işe yarar -> a etiketinin sonuna bir şey eklemek istediğimizde kullanırız.
+    a::link ne işe yarar -> a etiketinin link olduğunu belirtir.
+    */
+    color:black;
+    text-decoration: none;
+}
+
+ul{
+  list-style: none;
+}

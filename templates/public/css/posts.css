@@ -1,0 +1,84 @@
+.posts
+{
+    flex: 9;
+    margin-bottom:20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.posts .post
+{
+    width: calc(50% - 20px);
+    border: 1px solid rgb(0,0,0,0.3);
+    border-radius: 10px; 
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+@media(max-width: 1100px)
+{
+    .posts .post
+{
+    width: 100%;
+    border: 1px solid rgb(0,0,0,0.3);
+    border-radius: 10px; 
+    padding: 15px;
+    margin-bottom: 30px;
+}
+}
+{
+    .posts .post
+    {
+        width: 100%;
+    }
+}
+
+.posts h1
+{
+    font-family: "Josefin Sans", sans-serif;
+}
+
+.posts img
+{
+    border-radius: 10px;
+    margin-bottom: 5px;
+    height: 300px;
+    object-fit: cover;
+}
+
+.posts p
+{
+    font-family: "Josefin Sans", sans-serif;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    line-height: 23px;
+}
+
+.posts .authorAndDate
+{
+    font-family: "Josefin Sans", sans-serif;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    /*kalın yap*/
+    font-weight: bold;
+}
+
+/*scroll animation*/
+
+.posts .post
+{
+    opacity: 0;
+    transform: translateX(-20px);
+    transition: 0.5s;
+}
+
+.posts .post.active
+{
+    opacity: 1;
+    transform: translateX(0px);
+}

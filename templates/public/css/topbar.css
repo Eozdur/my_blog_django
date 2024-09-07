@@ -1,0 +1,114 @@
+.topbar
+{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 50px;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 19px;
+    background-color: #f5f4f4;
+}
+
+.topbar .wrapper
+{
+  width: 100%;
+  display: flex;
+  max-width: 1366px;
+}
+
+.topbar .left, .topbar .right
+{
+  flex: 3;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.topbar .left i
+{
+  font-size: 1.3rem;
+}
+
+.topbar .middle
+{
+  flex: 6;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.topbar .middle a
+{
+  text-decoration: none;
+}
+
+.topbar .middle a:hover
+{
+  color: orange;
+}
+
+.topbar .right span img
+{
+  margin-top: 10px;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+}
+
+.topbar .right .searchEngine{
+  width: 70%;
+  height: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.topbar .right .searchEngine i{
+  position: absolute;
+  right: 0px;
+  width: 30px;
+  height: 30px;
+  background-color: orange;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.topbar .right .searchEngine input{
+  width: 100%;
+  margin-right: 20px;
+  border-radius: 3px;
+  height: 25px;
+  padding: 0px 0px 0px 10px;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+.topbar .right .searchEngine{
+  width: 0px;
+  transition: all 0.5s;
+}
+
+.topbar .right .searchEngine.active{
+  width: 70%;
+}
+
+.topbar .right .searchEngine.active input{
+  opacity: 1;
+}
+
+/* Scroll animation*/
+.topbar .wrapper
+{
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.topbar .wrapper.active
+{
+    opacity: 1;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="topbar">
+        <div class="wrapper target">
+            <div class="left">
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-twitter"></i>
+                <i class="fa-brands fa-facebook"></i>
+                <i class="fa-brands fa-linkedin"></i>
+            </div>
+            <div class="middle">
+                <a href="{% url 'home' %}">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="{% url 'register' %}">REGISTER</a>
+                <a href="{% url 'login' %}">LOGIN</a>
+                <a href="{% url 'add' %}">ADD</a>
+            </div>
+            <div class="right">
+                <span>
+                    <img src="{% static 'img/user/user-1.png' %}" alt="profile">
+                </span>
+                <div class="searchEngine" id="searchEngine">
+                    <input type="text" placeholder="Search">
+                    <i class="fa fa-search" id="search-icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Register kısmı-->
+    <div class="logReg">
+        <img src="{% static 'img/background/register.jpg' %}" alt="register">
+        <form>
+            <div class="formGroup">
+                <input type="text" required>
+                <span>Email *</span>
+            </div>
+            <div class="formGroup">
+                <input type="text" required>
+                <span>Username *</span>
+            </div>
+            <div class="formGroup">
+                <input type="text" required>
+                <span>Password *</span>
+            </div>
+            <div class="btnGroup">
+                <a href="{% url 'login' %}">Do you have an account?</a>
+                <button type="submit">Register</button>
+            </div>
+        </form>
+    </div>
+     
+    <script src="{% static 'js/search.js' %}"></script>
+    <script src="{% static 'js/scroll.js' %}"></script>
+</body>
+</html>
